@@ -1,0 +1,27 @@
+{
+  "name": "incrementa-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm build && pnpm -r typecheck",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "example": "pnpm --filter @incrementa/factory start",
+    "verify": "pnpm build && pnpm -r typecheck && node --test tests/*.test.mjs && pnpm example"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "@types/node": "25.5.0"
+  },
+  "dependencies": {
+    "@incrementa/core": "workspace:*",
+    "@incrementa/engine": "workspace:*",
+    "@incrementa/mechanics": "workspace:*",
+    "@incrementa/decorators": "workspace:*",
+    "@incrementa/runtime-local": "workspace:*"
+  }
+}

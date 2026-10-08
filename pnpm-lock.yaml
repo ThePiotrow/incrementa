@@ -1,0 +1,122 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:packages/core
+      '@incrementa/decorators':
+        specifier: workspace:*
+        version: link:packages/decorators
+      '@incrementa/engine':
+        specifier: workspace:*
+        version: link:packages/engine
+      '@incrementa/mechanics':
+        specifier: workspace:*
+        version: link:packages/mechanics
+      '@incrementa/runtime-local':
+        specifier: workspace:*
+        version: link:packages/runtime-local
+    devDependencies:
+      '@types/node':
+        specifier: 25.5.0
+        version: 25.5.0
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  examples/factory:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@incrementa/decorators':
+        specifier: workspace:*
+        version: link:../../packages/decorators
+      '@incrementa/engine':
+        specifier: workspace:*
+        version: link:../../packages/engine
+      '@incrementa/mechanics':
+        specifier: workspace:*
+        version: link:../../packages/mechanics
+      '@incrementa/runtime-local':
+        specifier: workspace:*
+        version: link:../../packages/runtime-local
+
+  packages/core:
+    dependencies:
+      decimal.js:
+        specifier: 10.6.0
+        version: 10.6.0
+
+  packages/decorators:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:../core
+
+  packages/engine:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:../core
+
+  packages/mechanics:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:../core
+      '@incrementa/engine':
+        specifier: workspace:*
+        version: link:../engine
+      zod:
+        specifier: 4.6.5
+        version: 4.6.5
+
+  packages/runtime-local:
+    dependencies:
+      '@incrementa/core':
+        specifier: workspace:*
+        version: link:../core
+      '@incrementa/engine':
+        specifier: workspace:*
+        version: link:../engine
+
+packages:
+
+  '@types/node@25.5.0':
+    resolution: {integrity: sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw==}
+
+  decimal.js@10.6.0:
+    resolution: {integrity: sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==}
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@7.18.2:
+    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+
+  zod@4.6.5:
+    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+
+snapshots:
+
+  '@types/node@25.5.0':
+    dependencies:
+      undici-types: 7.18.2
+
+  decimal.js@10.6.0: {}
+
+  typescript@6.0.3: {}
+
+  undici-types@7.18.2: {}
+
+  zod@4.6.5: {}

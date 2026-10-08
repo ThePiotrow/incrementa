@@ -1,0 +1,17 @@
+{
+  "name": "@incrementa/factory",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@incrementa/core": "workspace:*",
+    "@incrementa/engine": "workspace:*",
+    "@incrementa/mechanics": "workspace:*",
+    "@incrementa/decorators": "workspace:*",
+    "@incrementa/runtime-local": "workspace:*"
+  }
+}
